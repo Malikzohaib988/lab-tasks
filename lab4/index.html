@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Gradesheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Student Gradesheet</header>
+
+    <h1>Student Gradesheet Card</h1>
+    <p>Student Academic Performance</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Passed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Zohaib Malik</td>
+                <td>20</td>
+                <td>A+</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Jannat</td>
+                <td>18</td>
+                <td>A+</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Suraiya</td>
+                <td>19</td>      
+                <td>A+</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Haider Ali</td>
+                <td>20</td>           
+                <td>F</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Saqib Tariq</td>
+                <td>22</td>           
+                <td>B</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Zain Ali </td>
+                <td>18</td>           
+                <td>B-</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Babar </td>
+                <td>22</td>           
+                <td>C-</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Ameila kerr</td>
+                <td>23</td>        
+                <td>A+</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>009</td>
+                <td>Zahra Sheikh</td>
+                <td>19</td>
+                <td>F</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>010</td>
+                <td>Ali Salman</td>
+                <td>19</td>
+                <td>B+</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Add a New Student</h2>
+    <form>
+        <label for="roll">Roll No:</label>
+        <input type="number" id="roll" name="roll" required>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="30" required>
+        
+        <label for="grade">Grade:</label>
+        <select id="grade" name="grade">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="F">F</option>
+        </select>
+        
+        <label>Passed:</label>
+        <input type="radio" id="yes" name="passed" value="Yes" checked>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="passed" value="No">
+        <label for="no">No</label>
+        
+        <input type="submit" value="Add Student">
+    </form>
+
+    <div class="report">
+        <h2>Project Report</h2>
+        <p>
+            I have created a student gradesheet that displays academic performance in table.After making table I have created a form which allows to add a new student record. Then I apply CSS on whole page look like user friendly.
+        </p>
+    </div>
+
+    <footer>
+        <p> @2025 Malik Zohaib. All rights reserved.</p>
+    </footer>
+</body>
+</html>

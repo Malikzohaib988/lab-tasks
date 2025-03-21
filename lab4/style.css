@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e9edf8;
+}
+
+header {
+    background: #0a0c17;
+    color: #d5efdc;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgb(237, 251, 253);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background: #374785;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: #cfd4db;
+}
+
+tr:hover {
+    background: #59d085;
+}
+
+form {
+    width: 60%;
+    margin: 20px auto;
+    background: rgb(168, 177, 48);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bda4a4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background: #081010;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #a6441a;
+}
+
+.report {
+    background-color: rgb(15, 134, 33);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px
+}
+
+
+footer {
+    background: #2a2d3e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
