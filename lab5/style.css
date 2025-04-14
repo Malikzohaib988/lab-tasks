@@ -1,6 +1,6 @@
 :root {
     --background-color: #054249;
-    --primary-dark: #032c31; 
+    --primary-dark: #032c31;
     --text-color: #333;
     --text-light: #555;
     --white: #fff;
@@ -8,12 +8,15 @@
     --nav-text-color: #ffffff;
 }
 
-/* ========== GRID LAYOUT FOR WHOLE PAGE ========== */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
     display: grid;
     grid-template-areas:
         "header"
@@ -22,8 +25,6 @@ body {
         "profile"
         "footer";
     grid-template-rows: auto auto 1fr auto auto;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
 header {
@@ -48,6 +49,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -55,36 +57,33 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--nav-text-color);
     font-size: 20px;
     text-decoration: none;
 }
 
-header .logo {
+.logo {
     width: 100px;
     height: auto;
-    border-radius: 60%; 
+    border-radius: 60%;
 }
 
-header .heading {
-    margin: 20px 0 0;
-    text-align: center;
+.heading {
     font-size: 37px;
-    font-weight: bold;
+    margin-top: 20px;
 }
 
 main {
     grid-area: main;
-    padding: 20px;
     background-color: var(--white);
     margin: 20px;
+    padding: 20px;
     border-radius: var(--border-radius);
 }
 
 article h1 {
-    font-size: 37px;
     text-align: center;
-    margin-bottom: 10px;
+    font-size: 37px;
     color: var(--background-color);
 }
 
@@ -92,68 +91,59 @@ article h2 {
     font-size: 30px;
     margin-top: 20px;
     color: var(--text-color);
-    padding-bottom: 5px;
 }
 
-article p {
-    margin: 10px 0;
+article p, article ul li {
     color: var(--text-light);
+    margin: 10px 0;
 }
 
 article ul {
-    margin: 10px 0;
     padding-left: 20px;
-}
-
-article ul li {
-    margin-bottom: 10px;
-    color: var(--text-light);
 }
 
 .ai-image {
     width: 100%;
     max-width: 600px;
-    height: auto;
     display: block;
     margin: 20px auto;
     border-radius: var(--border-radius);
     border: 3px solid var(--background-color);
 }
 
-/* ========== FLEXBOX IN PROFILE SECTION ========== */
 .profile {
     grid-area: profile;
     background-color: var(--white);
-    padding: 20px;
     margin: 20px;
+    padding: 20px;
     border-radius: var(--border-radius);
 }
 
 .profile-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 20px;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.profile h3 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: var(--background-color);
-}
-
-.profile p {
-    margin: 10px 0;
-    color: var(--text-light);
-}
-
-.profile .profile-pic {
+.profile-pic {
     width: 150px;
     height: auto;
     border-radius: 50%;
     border: 3px solid var(--background-color);
+}
+
+.profile h3 {
+    font-size: 30px;
+    color: var(--background-color);
+    margin: 0 0 10px;
+}
+
+.profile p {
+    color: var(--text-light);
+    margin: 5px 0;
 }
 
 footer {
@@ -162,11 +152,34 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
     border-top: 5px solid var(--primary-dark);
 }
 
 footer p {
     margin: 0;
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main profile"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
